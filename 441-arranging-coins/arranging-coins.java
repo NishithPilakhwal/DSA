@@ -10,10 +10,9 @@ class Solution {
         {
             mid = low +(high-low)/2;
              s= mid *(mid+1)/2;
-             if(s==n)return (int)mid;
-            if(s <n)
+            if(s <= n && s> t*(t+1)/2)
             {
-            //   t =mid;
+             t =mid;
              low = mid+1;
             }
             else 
@@ -21,6 +20,6 @@ class Solution {
                 high = mid-1;
             }
         }
-        return (int)high;
+        return (int)t;
     }
 }
