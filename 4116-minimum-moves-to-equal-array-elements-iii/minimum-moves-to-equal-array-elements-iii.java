@@ -11,17 +11,7 @@ class Solution {
         }
         for(int i=0;i<nums.length;i++)
         {
-            while(nums[i]!=max)
-            {
-                if(nums[i]<max)
-                {
-                    nums[i]++;
-                    st++;
-                }
-                
-            }
-
-            
+           st += max-nums[i];     
         }
         return st;
     }
