@@ -1,6 +1,6 @@
 class Solution {
     public boolean validDigit(int n, int x) {
-        int las =Integer.MIN_VALUE;
+        int las =10;
         int temp=n;
         while(temp!=0)
         {
