@@ -5,7 +5,7 @@ class Solution {
         int high=height.length-1;
         while(low!=high)
         {
-            maxar =  Math.max(maxar,Math.abs((high-low)) * Math.min(height[low],height[high]));
+            maxar =  Math.max(maxar,(high-low) * Math.min(height[low],height[high]));
             if(height[low]<=height[high])
             {
                 low++;
