@@ -1,25 +1,22 @@
 class Solution {
     public int maxFreqSum(String s) {
         int hold[] = new int[26];
-        for(int i =0;i<s.length();i++)
-        {
-            hold[s.charAt(i) -'a']++;
-        }
         int cmax=0;
         int vmax=0;
-        for(int i =0;i<s.length();i++)
+       for(int i =0;i<s.length();i++)
+       {
+        char f = s.charAt(i);
+        hold[f-'a']++;
+        if(f =='a'||f=='e'||f=='i'||f=='o'||f=='u')
         {
-            char p=s.charAt(i);
-            if(p=='a'||p=='e' ||p=='i'||p=='o'||p=='u')
-            {
-                vmax=Math.max(vmax,hold[p-'a']);
-            }
-            else
-            {
-             cmax=Math.max(cmax,hold[p-'a']);
+            vmax=Math.max(vmax,hold[f-'a']);
         }
+        else
+        {
+            cmax=Math.max(cmax,hold[f-'a']);
         }
-        return vmax+cmax;
+       }
+       return cmax+vmax;
 
     }
 }
